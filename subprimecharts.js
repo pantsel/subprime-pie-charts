@@ -91,7 +91,6 @@ function canvasPieChart() {
                 };
               }
             // ToDo
-            /*var trackMouseMove = false;
             can.addEventListener("mousemove", function(e){ 
                 // Get the mouse cursor position at the time of the click, relative to the canvas
                 var mousePos = getMousePos(this,e);
@@ -107,18 +106,18 @@ function canvasPieChart() {
                     if ( clickAngle < 0 ) clickAngle = 2 * Math.PI + clickAngle;
                     for(var i=0;i<chartData.length;i++){
                         if ( clickAngle >= chartData[i].startingAngle && clickAngle <= chartData[i].endingAngle ) {
-                                if(!trackMouseMove){
-                                    trackMouseMove = true;
-                                    newChartData[0].dataColors[i] = "#cccccc";
-                                    draw(newChartData,newOptions);
-                                }
+                               
+                            chartData[i].focused = true;
+                            draw(chartData,newOptions);
                             return;  
                         }
-                    }
-
+                    }  
                 }
-                trackMouseMove = false;
-            },false);*/
+                
+                // Remove focus from all slices
+                for(var i=0;i<chartData.length;i++){chartData[i].focused = false;}
+                draw(chartData,newOptions);
+            },false);
             
             
     };
@@ -259,7 +258,7 @@ function canvasPieChart() {
                 drawSlice(ctx,centerX,centerY,radius,oldAngle,angle,data[i].color,strokeColor,false,donutize);
 
                 // If showSliceInfo is true draw slice information
-                if(showSliceInfo || data[i].popInfo)
+                if(showSliceInfo || data[i].focused)
                     drawSliceInfo(ctx,textColor,data[i].name,dataPercentage[i],fontSize,data[i].value,labX,labY);
                 
                 // Draw inline percentages if option is set but make sure that  text is not overlapping the slice
@@ -375,7 +374,6 @@ function canvasPieChart() {
         }
         html += "<table class='spc-legend-content'>";
         html += "<tr class='spc-legend-th'>";
-        //html += "<td colspan='2'><span>#</span></td>";
         for(var i=0;i<chartOptions[0].legend[0].columns.length;i++){
             if(i === 0){
                 html += "<td colspan='2'>" + chartOptions[0].legend[0].columns[i] + "</span></td>";
@@ -455,7 +453,6 @@ function canvasPieChart() {
                             if(e.target === this && e.target.clientHeight !== 0){
                                 this.style.background = 'transparent';
                                 this.sliceData.mouseIn = false;
-                                this.sliceData.popInfo = false;
                                 this.sliceData.focused = false;
                                 draw(this.chrtData,this.options);
                             }
@@ -467,7 +464,6 @@ function canvasPieChart() {
             // Assign the hovered element in sliceData
             if(!sliceData.mouseIn) {
                 sliceData.mouseIn = true;
-                sliceData.popInfo = true;
                 sliceData.focused = true;
                 console.log("mouse in");
                 draw(data,options);
