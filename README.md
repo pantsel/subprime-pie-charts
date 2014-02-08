@@ -11,7 +11,7 @@ Define the Canvas element on which the chart will be drawn.
 ```html
 <canvas id="myChart"></canvas>
 ```
-You can define multiple canvas elements and draw multiple charts width different sets of data.
+You can define multiple canvas elements and draw multiple charts width different sets of data and configuration.
 <h4>Step 3</h4>
 Initialize the chart and provide the required data.
 ```javascript
