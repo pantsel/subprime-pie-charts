@@ -180,7 +180,7 @@ var data = [
         }
     ];
 ```
-<h4>Pie Chart Options</h4>
+<h4>Pie Chart Preferences</h4>
 <table>
         <tr>
                 <td><strong>Name</strong></td>
