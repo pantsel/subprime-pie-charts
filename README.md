@@ -80,8 +80,8 @@ var options = [{
                 [{
                         containerId : "myChart-legend",
                         title       : "Mobile operating Systems", // The title of the Chart
-                        columns     : ["Operating systems","Awesomness","%"], //The column names of the legend table
-                        showTotal   : true, // Whether or not to sidplay the total sum of data values
+                        columns     : ["Operating systems","Awesomness","%"], //The column names of the legend table. At least one column is required
+                        showTotal   : true, // Whether or not to display the total sum of data values
                         totalText   : " Total :" // The text that describes the sum of data values
                 }]
             }];
@@ -89,3 +89,66 @@ var options = [{
 myChart.draw(data,options); // draw the chart!
 ```
 The generated table is not styled by default so that you are able to apply your own unique styling.
+<h4>More Options</h4>
+<table>
+        <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>Type</strong></td>
+                <td><strong>Description</strong></td>
+                <td><strong>Default</strong></td>
+        </tr>
+        <tr>
+                <td>showSliceInfo</td>
+                <td>boolean</td>
+                <td>Whether or not to display the data and info of the corresponding slice by default</td>
+                <td>false</td>
+        </tr>
+        <tr>
+                <td>showInlinePercentages</td>
+                <td>boolean</td>
+                <td>Whether or not to display the percentage occupied by each data value inside the dorresponding slice</td>
+                <td>true</td>
+        </tr>
+        <tr>
+                <td>inlinePercentagesColor</td>
+                <td>HEX String</td>
+                <td>The text color of inline percentages</td>
+                <td>Black or white is, depending on each slice's contrast</td>
+        </tr>
+        <tr>
+                <td>fontFace</td>
+                <td>String</td>
+                <td>The text's font.</td>
+                <td>segoe ui</td>
+        </tr>
+        <tr>
+                <td>fontSize</td>
+                <td>Integer</td>
+                <td>The text's size in pixels.</td>
+                <td>16</td>
+        </tr>
+        <tr>
+                <td>strokeColor</td>
+                <td>HEX String</td>
+                <td>The color of each slice's stroke.</td>
+                <td>no stroke is applied</td>
+        </tr>
+        <tr>
+                <td>dataValuesPrefix</td>
+                <td>String</td>
+                <td>The text prefixing the each value as it is displayed on the chart.</td>
+                <td> - </td>
+        </tr>
+        <tr>
+                <td>dataValuesSuffix</td>
+                <td>String</td>
+                <td>The text that follows each data value as it is displayed on the chart.</td>
+                <td> - </td>
+        </tr>
+        <tr>
+                <td>interactivity</td>
+                <td>Boolean</td>
+                <td>Whether or not the chart is interactive.</td>
+                <td>true</td>
+        </tr>
+</table>
