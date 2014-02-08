@@ -135,6 +135,7 @@ The generated table is not styled by default so that you are able to apply your 
         
 </table>
 <h4>Exploding Slices</h4>
+You can define which slices will explode by default.
 ```javascript
 var data = [
         {
