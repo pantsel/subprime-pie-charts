@@ -78,16 +78,62 @@ var options = [{
                 legend :
                 [{
                         containerId : "myChart-legend",
-                        title       : "Mobile operating Systems", // The title of the Chart
-                        columns     : ["Operating systems","Awesomness","%"], //The column names of the legend table. At least one column is required
-                        showTotal   : true, // Whether or not to display the total sum of data values
-                        totalText   : " Total :" // The text that describes the sum of data values
+                        title       : "Mobile operating Systems",
+                        columns     : ["Operating systems","Awesomness","%"],
+                        showTotal   : true,
+                        totalText   : " Total :"
                 }]
             }];
     
 myChart.draw(data,options); // draw the chart!
 ```
 The generated table is not styled by default so that you are able to apply your own unique styling.
+<h4>Chart Legend Options</h4>
+<table>
+        <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>Type</strong></td>
+                <td><strong>Description</strong></td>
+                <td><strong>Default</strong></td>
+                <td><strong>Required</strong></td>
+        </tr>
+        <tr>
+                <td>containerId</td>
+                <td>String</td>
+                <td>The id of the element that contains the legend table</td>
+                <td> - </td>
+                <td>required</td>
+        </tr>
+        <tr>
+                <td>title</td>
+                <td>String</td>
+                <td>The charts title</td>
+                <td> - </td>
+                <td>optional</td>
+        </tr>
+        <tr>
+                <td>columns</td>
+                <td>Array</td>
+                <td>The legend's table column name</td>
+                <td> - </td>
+                <td>At least one is required</td>
+        </tr>
+        <tr>
+                <td>showTotal</td>
+                <td>Boolean</td>
+                <td>Whether or not to display the total sum of data values</td>
+                <td>true</td>
+                <td>optional</td>
+        </tr>
+        <tr>
+                <td>totalText</td>
+                <td>String</td>
+                <td>The text that describes the sum of data values</td>
+                <td>Total : </td>
+                <td>depends on showTotal</td>
+        </tr>
+        
+</table>
 <h4>Exploding Slices</h4>
 ```javascript
 var data = [
