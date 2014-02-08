@@ -164,3 +164,28 @@ The generated table is not styled by default so that you are able to apply your 
                 <td>0.5</td>
         </tr>
 </table>
+
+Example
+```javascript
+var options = [
+            {
+                showSliceInfo          : false,
+                showInlinePercentages  : true,
+                inlinePercentagesColor : "#FFFFFF",
+                strokeColor            : "#FFFFFF",
+                dataValuesPrefix       : "",
+                dataValuesSuffix       : "",
+                fontFace               : "segoe ui",
+                fontSize               : 16,
+                legend                 :[{
+                        containerId : "canvas-legend",
+                        title       : "Connected Devices",
+                        columns     : ["Operating systems","Awesomness","%"],
+                        showTitle   : true,
+                        showTotal   : true,
+                        totalText   : "Total : "
+                }]
+            }
+        ];
+```
+
