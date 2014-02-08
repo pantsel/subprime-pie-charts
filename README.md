@@ -89,6 +89,27 @@ var options = [{
 myChart.draw(data,options); // draw the chart!
 ```
 The generated table is not styled by default so that you are able to apply your own unique styling.
+<h4>Exploding Slices</h4>
+```javascript
+var data = [
+        {
+            value   : 57,
+            color   : "#50c0e9",
+            name    : "iOS",
+            explode : true
+        },
+        {
+            value   : 43,
+            color   : "#cb97e5",
+            name    : "Android"
+        },
+        {
+            value   : 11,
+            color   : "#a8d324",
+            explode : true
+        }
+    ];
+```
 <h4>Pie Chart Options</h4>
 <table>
         <tr>
