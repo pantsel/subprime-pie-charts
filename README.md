@@ -216,7 +216,7 @@ var data = [
         </tr>
         <tr>
                 <td>fontSize</td>
-                <td>Integer</td>
+                <td>Number</td>
                 <td>The text's size in pixels.</td>
                 <td>16</td>
         </tr>
@@ -252,7 +252,7 @@ var data = [
         </tr>
         <tr>
                 <td>donutHoleRadius</td>
-                <td>Double</td>
+                <td>Number</td>
                 <td>The radius of the donut hole relative to the chart's radius (0-1).</td>
                 <td>0.5</td>
         </tr> 
