@@ -1,5 +1,4 @@
 <h2>Subprime Pie Charts</h2>
-<script>alert("hello")</script>
 A flexible HTML5 Canvas API used to create interactive Pie Charts. Very simple to implement, configure and personalize. It is coded in pure javascript in order to avoid conflicts with libraries such as jQuery and Mootools. Works on HTML5 compatible browsers. Tested on IE9-10, Firefox, Opera, Chrome and Safari.
 <h2>Basic Usage</h2>
 <h4>Step 1</h4>
