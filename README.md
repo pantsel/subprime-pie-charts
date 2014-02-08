@@ -158,6 +158,28 @@ var data = [
         }
     ];
 ```
+<h4>Focusing Slices</h4>
+You can also define which slices will be focused by default.
+```javascript
+var data = [
+        {
+            value   : 57,
+            color   : "#50c0e9",
+            name    : "iOS",
+            focused : true
+        },
+        {
+            value   : 43,
+            color   : "#cb97e5",
+            name    : "Android"
+        },
+        {
+            value   : 11,
+            color   : "#a8d324",
+            focused : true
+        }
+    ];
+```
 <h4>Pie Chart Options</h4>
 <table>
         <tr>
