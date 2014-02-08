@@ -56,7 +56,6 @@ var data = [
     
 myChart.draw(data); // draw the chart
 ```
-Ready!
 <h2>Customising</h2>
 <h4>Adding a Legend</h4>
 Create a container for the legend.
