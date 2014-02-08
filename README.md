@@ -23,7 +23,7 @@ var myChart = new canvasPieChart();
 myChart.init("myChart",500,500); 
 
 // Provide the data to be transfered on the chart
-// value : the actual value of the data entry
+// value : the actual numeric value of the data entry
 // color : the color of the corresponding pie slice
 // name  : the textual name of the data entry
 var data = [
