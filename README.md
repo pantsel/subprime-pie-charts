@@ -226,7 +226,7 @@ var data = [
         <tr>
                 <td>donutHoleRadius</td>
                 <td>Double</td>
-                <td>The radius of the donut hole (0-1).</td>
+                <td>The radius of the donut hole relative to the chart's radius (0-1).</td>
                 <td>0.5</td>
         </tr> 
 </table>
