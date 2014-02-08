@@ -82,15 +82,7 @@ function canvasPieChart() {
                 
             }, false);
 
-            // Gets the mouse position relative to the canvas
-            function getMousePos(canvas, e) {
-                var rect = canvas.getBoundingClientRect();
-                return {
-                  x: e.clientX - rect.left,
-                  y: e.clientY - rect.top
-                };
-              }
-            // ToDo
+            
             can.addEventListener("mousemove", function(e){ 
                 // Get the mouse cursor position at the time of the click, relative to the canvas
                 var mousePos = getMousePos(this,e);
@@ -118,6 +110,15 @@ function canvasPieChart() {
                 for(var i=0;i<chartData.length;i++){chartData[i].focused = false;}
                 draw(chartData,newOptions);
             },false);
+            
+            // Gets the mouse position relative to the canvas
+            function getMousePos(canvas, e) {
+                var rect = canvas.getBoundingClientRect();
+                return {
+                  x: e.clientX - rect.left,
+                  y: e.clientY - rect.top
+                };
+              }
             
             
     };
