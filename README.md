@@ -217,7 +217,7 @@ var data = [
         <tr>
                 <td>interactivity</td>
                 <td>String</td>
-                <td>Enable/Disable Legend - Chart interactivity. Values : "enabled","disabled"</td>
+                <td>Enable/Disable Legend - Chart interactivity. <br>Values : "enabled","disabled"</td>
                 <td>enabled</td>
         </tr>
         <tr>
