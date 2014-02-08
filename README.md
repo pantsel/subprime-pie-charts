@@ -89,7 +89,7 @@ var options = [{
 myChart.draw(data,options); // draw the chart!
 ```
 The generated table is not styled by default so that you are able to apply your own unique styling.
-<h4>More Options</h4>
+<h4>Pie Chart Options</h4>
 <table>
         <tr>
                 <td><strong>Name</strong></td>
@@ -150,5 +150,17 @@ The generated table is not styled by default so that you are able to apply your 
                 <td>Boolean</td>
                 <td>Whether or not the chart is interactive.</td>
                 <td>true</td>
+        </tr>
+        <tr>
+                <td>donutize</td>
+                <td>Boolean</td>
+                <td>Creates a donut chart.</td>
+                <td>false</td>
+        </tr>
+        <tr>
+                <td>donutHoleRadius</td>
+                <td>Double</td>
+                <td>The radius of the donut hole (0-1).</td>
+                <td>0.5</td>
         </tr>
 </table>
