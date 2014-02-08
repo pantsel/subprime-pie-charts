@@ -113,7 +113,7 @@ The generated table is not styled by default so that you are able to apply your 
                 <td>inlinePercentagesColor</td>
                 <td>HEX String</td>
                 <td>The text color of inline percentages</td>
-                <td>Black or white is, depending on each slice's contrast</td>
+                <td>Black or white, depending on each slice's contrast</td>
         </tr>
         <tr>
                 <td>fontFace</td>
