@@ -162,7 +162,7 @@ The generated table is not styled by default so that you are able to apply your 
                 <td>Double</td>
                 <td>The radius of the donut hole (0-1).</td>
                 <td>0.5</td>
-        </tr>
+        </tr> 
 </table>
 
 Example
