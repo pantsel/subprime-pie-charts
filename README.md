@@ -8,57 +8,89 @@ See Subprime Pie Charts in action [here](http://subprimead.com/subprime_piechart
 <h4>Step 1</h4>
 Include subprimecharts.js in the head section of your page.
 ```html
-<script src="path/to/my/js/folder/subprimecharts.js"></script>
+<!DOCTYPE HTML>
+<html>
+        <head>
+        	<meta charset="utf-8">
+        	<title></title>
+        	<script src="path/to/my/js/folder/subprimecharts.js"></script>
+        </head>
+        <body>
+        </body>
+</html>  
 ```
 <h4>Step 2</h4>
 Define the Canvas element on which the chart will be drawn.
 ```html
-<canvas id="myChart"></canvas>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="path/to/my/js/folder/subprimecharts.js"></script>
+</head>
+<body>
+	<canvas id="myChart"></canvas>
+</body>
+</html> 
 ```
 You can define multiple canvas elements and draw multiple charts width different sets of data and configuration.
 <h4>Step 3</h4>
 Initialize the chart and provide the required data.
-```javascript
-var myChart = new canvasPieChart();
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="path/to/my/js/folder/subprimecharts.js"></script>
+</head>
+<body>
+	<canvas id="myChart"></canvas>
+	<script>
+		var myChart = new canvasPieChart();
 
-// Initialize the chart(container id,width,height).
-// if null values are passed for the width and/or height the parent element's dimentions will be assigned.
-// ex. myChart.init("myChart",null,null);
-myChart.init("myChart",500,500); 
+		// Initialize the chart(container id,width,height).
+		// if null values are passed for the width and/or height the parent element's dimentions will be assigned.
+		// ex. myChart.init("myChart",null,null);
+		myChart.init("myChart",500,500); 
 
-// Provide the data to be transfered on the chart
-// value : the actual numeric value of the data entry
-// color : the color of the corresponding pie slice
-// name  : the textual reference to the data entry
-var data = [
-        {
-            value : 57,
-            color : "#50c0e9",
-            name  : "iOS"
-        },
-        {
-            value : 43,
-            color : "#cb97e5",
-            name  : "Android"
-        },
-        {
-            value : 11,
-            color : "#a8d324",
-            name  : "BlackBerry"
-        },
-        {
-            value : 24,
-            color : "#ffa713",
-            name  : "Symbian"
-        },
-        {
-            value : 32,
-            color : "#f83a3a",
-            name  : "Windows OS"
-        }
-    ];
-    
-myChart.draw(data); // draw the chart
+		// Provide the data to be transfered on the chart
+		// value : the actual numeric value of the data entry
+		// color : the color of the corresponding pie slice
+		// name  : the textual reference to the data entry
+		var data = [
+				{
+					value : 57,
+					color : "#50c0e9",
+					name  : "iOS"
+				},
+				{
+					value : 43,
+					color : "#cb97e5",
+					name  : "Android"
+				},
+				{
+					value : 11,
+					color : "#a8d324",
+					name  : "BlackBerry"
+				},
+				{
+					value : 24,
+					color : "#ffa713",
+					name  : "Symbian"
+				},
+				{
+					value : 32,
+					color : "#f83a3a",
+					name  : "Windows OS"
+				}
+			];
+			
+		myChart.draw(data); // draw the chart
+	</script>
+</body>
+</html>    
 ```
 <h2>Customising</h2>
 <h4>Adding a Legend</h4>
