@@ -10,13 +10,13 @@ Include subprimecharts.js in the head section of your page.
 ```html
 <!DOCTYPE HTML>
 <html>
-        <head>
-        	<meta charset="utf-8">
-        	<title></title>
-        	<script src="path/to/my/js/folder/subprimecharts.js"></script>
-        </head>
-        <body>
-        </body>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="path/to/my/js/folder/subprimecharts.js"></script>
+</head>
+<body>
+</body>
 </html>  
 ```
 <h4>Step 2</h4>
