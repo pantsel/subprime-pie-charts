@@ -27,7 +27,7 @@ myChart.init("myChart",500,500);
 // Provide the data to be transfered on the chart
 // value : the actual numeric value of the data entry
 // color : the color of the corresponding pie slice
-// name  : the textual representation of the data entry
+// name  : the textual reference to the data entry
 var data = [
         {
             value : 57,
