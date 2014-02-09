@@ -86,7 +86,6 @@ function canvasPieChart() {
             can.addEventListener("mousemove", function(e){ 
                 // Get the mouse cursor position at the time of the click, relative to the canvas
                 var mousePos = getMousePos(this,e);
-                $("#mCoords").html(mousePos.x + "," + mousePos.y);
                 // Was the click inside the pie chart?
                 var xFromCenter = mousePos.x - centerX;
                 var yFromCenter = mousePos.y - centerY;
