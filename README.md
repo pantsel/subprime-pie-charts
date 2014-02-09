@@ -81,7 +81,7 @@ var options = [{
                 [{
                         containerId : "myChart-legend",
                         title       : "Mobile operating Systems",
-                        columns     : ["Operating systems","Awesomness","%"],
+                        columns     : ["Operating systems","Awesomeness","%"],
                         showTotal   : true,
                         totalText   : " Total :"
                 }]
@@ -270,7 +270,7 @@ var options = [
                 legend                 :[{
                         containerId : "canvas-legend",
                         title       : "Connected Devices",
-                        columns     : ["Operating systems","Awesomness","%"],
+                        columns     : ["Operating systems","Awesomeness","%"],
                         showTitle   : true,
                         showTotal   : true,
                         totalText   : "Total : "
