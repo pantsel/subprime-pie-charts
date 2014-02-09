@@ -2,6 +2,8 @@
 A flexible HTML5 Canvas API used to create interactive Pie & Donut Charts. Very simple to implement, configure and personalize. It is coded in pure javascript in order to avoid conflicts with libraries such as jQuery and Mootools. Works on HTML5 compatible browsers. Tested on IE9-10, Firefox, Opera, Chrome and Safari.
 
 ![Subprime Pie Charts](http://imageshack.com/a/img197/6740/6k3q.png)
+<h2>Demo</h2>
+See Subprime Pie Charts in action ![here](http://subprimead.com/subprime_piecharts_static).
 <h2>Basic Usage</h2>
 <h4>Step 1</h4>
 Include subprimecharts.js in the head section of your page.
