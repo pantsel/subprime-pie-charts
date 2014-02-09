@@ -289,27 +289,130 @@ var data = [
                 <td>0.5</td>
         </tr> 
 </table>
-Example :
-```javascript
-var options = [
-            {
-                showSliceInfo          : false,
-                showInlinePercentages  : true,
-                inlinePercentagesColor : "#FFFFFF",
-                strokeColor            : "#FFFFFF",
-                dataValuesPrefix       : "",
-                dataValuesSuffix       : "",
-                fontFace               : "segoe ui",
-                fontSize               : 16,
-                legend                 :[{
-                        containerId : "canvas-legend",
-                        title       : "Connected Devices",
-                        columns     : ["Operating systems","Awesomeness","%"],
-                        showTitle   : true,
-                        showTotal   : true,
-                        totalText   : "Total : "
-                }]
-            }
-        ];
+Full Example :
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="path/to/subprimecharts.js"></script>
+</head>
+<body>
+	<div id="canvas-legend"></div>
+	<canvas id="canvas"></canvas>               
+	<script>
+		var chart = new canvasPieChart();
+		chart.init("canvas",null,null);
+		var data = [
+			{
+				value : 57,
+				color : "#33b5e5",
+				name  : "iOS"
+			},
+			{
+				value : 43,
+				color : "#c182e0",
+				name  : "Android"
+			},
+			{
+				value : 11,
+				color : "#92c500",
+				name  : "BlackBerry"
+			},
+			{
+				value : 24,
+				color : "#ff9909",
+				name  : "Symbian"
+			   
+			},
+			{
+				value : 32,
+				color : "#f83a3a",
+				name  : "Windows OS"
+			}
+		];
+		var options = [
+				{
+					showSliceInfo          : false,
+					showInlinePercentages  : true,
+					inlinePercentagesColor : "#FFFFFF",
+					textColor              : "",
+					strokeColor            : "#FFFFFF",
+					dataValuesPrefix       : "",
+					dataValuesSuffix       : "",
+					interactivity          : "enabled",
+					donutize               : false,
+					donutHoleRadius        : 0.5,
+					fontFace               : "segoe ui",
+					fontSize               : 16,
+					legend                 :[{
+							containerId : "canvas-legend",
+							title       : "Mobile operating Systems",
+							columns     : ["Operating systems","Awesomeness","%"],
+							showTotal   : true,
+							totalText   : "Total Awesomeness : "
+					}]
+				}
+			];
+		chart.draw(data,options);
+		
+		var chart2 = new canvasPieChart();
+		chart2.init("canvas2",null,null);
+		var data2 = [
+			{
+				value : 57,
+				color : "#33b5e5",
+				name  : "iOS"
+			},
+			{
+				value : 43,
+				color : "#c182e0",
+				name  : "Android"
+			},
+			{
+				value : 11,
+				color : "#92c500",
+				name  : "BlackBerry"
+			},
+			{
+				value : 24,
+				color : "#ff9909",
+				name  : "Symbian"
+			   
+			},
+			{
+				value : 32,
+				color : "#f83a3a",
+				name  : "Windows OS"
+			}
+		];
+		var options2 = [
+				{
+					showSliceInfo          : false,
+					showInlinePercentages  : true,
+					inlinePercentagesColor : "#FFFFFF",
+					textColor              : "",
+					strokeColor            : "#FFFFFF",
+					dataValuesPrefix       : "",
+					dataValuesSuffix       : "",
+					interactivity          : "enabled",
+					donutize               : true,
+					donutHoleRadius        : 0.5,
+					fontFace               : "segoe ui",
+					fontSize               : 16,
+					legend                 :[{
+							containerId : "canvas-legend2",
+							title       : "Mobile operating Systems",
+							columns     : ["Operating systems","Awesomeness","%"],
+							showTotal   : true,
+							totalText   : "Total Awesomeness : "
+					}]
+				}
+			];
+		chart2.draw(data2,options2);  
+	</script>
+</body>
+</html>
 ```
 
