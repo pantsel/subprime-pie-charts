@@ -84,23 +84,25 @@ function canvasPieChart() {
 
             
             can.addEventListener("mousemove", function(e){ 
-                // Get the mouse cursor position at the time of the click, relative to the canvas
+                // Get the mouse cursor position at the time of the movement, relative to the canvas
                 var mousePos = getMousePos(this,e);
-                // Was the click inside the pie chart?
+                // Was the movement inside the pie chart?
                 var xFromCenter = mousePos.x - centerX;
                 var yFromCenter = mousePos.y - centerY;
-                // Calculate the distance between the mouse click and the center of the chart
+                // Calculate the distance between the mouse mouvement and the center of the chart
                 var distanceFromCenter = Math.sqrt( Math.pow( Math.abs( xFromCenter ), 2 ) + Math.pow( Math.abs( yFromCenter ), 2 ) );
-                if ( distanceFromCenter <= radius ) {// The click was inside the chart.
-                    // Find the slice that was clicked by comparing angles relative to the chart's center.
+                if ( distanceFromCenter <= radius ) {// The mouse is inside the chart.
+                    // Find the slice that the mouse is on by comparing angles relative to the chart's center.
                     var clickAngle = Math.atan2( yFromCenter, xFromCenter ) - 0;
                     if ( clickAngle < 0 ) clickAngle = 2 * Math.PI + clickAngle;
                     for(var i=0;i<chartData.length;i++){
                         if ( clickAngle >= chartData[i].startingAngle && clickAngle <= chartData[i].endingAngle ) {
-                               
+                             
                             chartData[i].focused = true;
                             draw(chartData,newOptions);
                             return;  
+                        }else{
+                            
                         }
                     }  
                 }
@@ -236,8 +238,8 @@ function canvasPieChart() {
             //Draw non exploded slices first, put exploded ones in an array so they can be drawn later
             if(data[i].explode){
                 explodedArray.push({
-                    oldAngle               :oldAngle,
-                    angle                  :angle,
+                    oldAngle               : oldAngle,
+                    angle                  : angle,
                     name                   : data[i].name,
                     value                  : data[i].value,
                     percentage             : dataPercentage[i],
@@ -293,7 +295,7 @@ function canvasPieChart() {
                     offsetX       : offsetX,
                     offsetY       : offsetY,
                     color         : data[i].color,
-                    explode      : false
+                    explode       : false
                 };
                 chartData.push(chartDataObj);
             }
